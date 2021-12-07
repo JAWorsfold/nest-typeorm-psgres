@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-set -o allexport; source ../../.env; set +o allexport
+set -o allexport; source ./.env; set +o allexport
 
 echo "echo stop & remove old docker [$POSTGRES_SERVER] and starting new fresh instance of [$POSTGRES_SERVER]"
 (docker kill $POSTGRES_SERVER || :) && \
